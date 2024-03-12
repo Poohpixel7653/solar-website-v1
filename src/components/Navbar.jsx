@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { logo } from "../assets";
+import scrollToComponent from "../utils/ScrollUtils";
 
 const Navbar = ({ onClick }) => {
   const [toggle, setToggle] = useState(false);
@@ -34,78 +35,104 @@ const Navbar = ({ onClick }) => {
     <div
       className={`w-full h-[96px] ${
         currentScrollPos <= 50
-          ? "bg-transparent text-white"
+          ? "md:bg-transparent text-white bg-white"
           : "sticky top-0 z-50 bg-white text-[#506f72] shadow-md"
-      } transition-colors duration-500 ease-in-out fixed z-40`}
+      } transition-colors duration-500 ease-in-out md:fixed z-40`}
     >
-      <div className=" md:max-w-[1400px] max-w-[600px] m-auto w-full h-full flex justify-between items-center ">
+      <div className="md:max-w-[1400px] m-auto w-full flex justify-between items-center px-10">
         <div className="flex p-2 rounded-xl justify-center items-center gap-4">
           <img src={logo} className="h-[75px]" />
           <div>
-            <p className="text-white font-medium">
-            MONO ENERGY CONSTRUCTION CO., LTD.
+            <p className="hidden lg:block lg:text-lg font-medium">
+              MONO ENERGY CONSTRUCTION CO., LTD.
             </p>
-            <p className="text-[#d1d1d1] font-medium">
-            บริษัท โมโน เอ็นเนอร์ยี่ คอนสตรัคชั่น จำกัด
+            <p className="hidden lg:block text-[#d1d1d1] font-medium">
+              บริษัท โมโน เอ็นเนอร์ยี่ คอนสตรัคชั่น จำกัด
             </p>
           </div>
         </div>
         <div className="hidden md:flex items-center">
           <ul className=" flex gap-10">
             <li
-              onClick={() => handleClickActive("Home")}
+              onClick={() => {
+                handleClickActive("Home");
+                scrollToComponent("home");
+              }}
               className={`menu-item ${activeItem === "Home" ? "active" : ""}`}
             >
               Home
             </li>
             <li
-              onClick={() => handleClickActive("About")}
+              onClick={() => {
+                handleClickActive("About");
+                scrollToComponent("service");
+              }}
               className={`menu-item ${activeItem === "About" ? "active" : ""}`}
             >
-              About
+              Service
             </li>
             <li
-              onClick={() => handleClickActive("Support")}
+              onClick={() => {
+                handleClickActive("Map");
+                scrollToComponent("map");
+              }}
+              className={`menu-item ${activeItem === "Map" ? "active" : ""}`}
+            >
+              Map
+            </li>
+            <li
+              onClick={() => {
+                handleClickActive("Feedback");
+                scrollToComponent("feedback");
+              }}
               className={`menu-item ${
-                activeItem === "Support" ? "active" : ""
+                activeItem === "Feedback" ? "active" : ""
               }`}
             >
-              Support
+              Feedback
             </li>
             <li
-              onClick={() => handleClickActive("Platform")}
+              onClick={() => {
+                handleClickActive("Contact");
+                scrollToComponent("contact");
+              }}
               className={`menu-item ${
-                activeItem === "Platform" ? "active" : ""
+                activeItem === "Contact" ? "active" : ""
               }`}
             >
-              Platform
-            </li>
-            <li
-              onClick={() => handleClickActive("Footer")}
-              className={`menu-item ${activeItem === "Footer" ? "active" : ""}`}
-            >
-              Footer
+              Contact
             </li>
           </ul>
         </div>
 
         <div className="md:hidden" onClick={handleClick}>
-          <button class="navbar-burger flex items-center text-blue-600 p-3">
-            <svg
-              class="block h-4 w-4 fill-current"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Mobile menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-            </svg>
+          <button class="w-14 h-14 relative focus:outline-none bg-transparent rounded">
+            <div class="block w-5 absolute left-6 top-1/2  transform  -translate-x-1/2 -translate-y-1/2">
+              <span
+                class={`block absolute h-0.5 w-7 text-[#a83234] bg-current transform transition duration-500 ease-in-out ${
+                  toggle ? "rotate-45" : "-translate-y-1.5"
+                }`}
+              ></span>
+              <span
+                class={`block absolute  h-0.5 w-7 text-[#a83234] bg-current   transform transition duration-500 ease-in-out ${
+                  toggle ? "opacity-0" : ""
+                }`}
+              ></span>
+              <span
+                class={`block absolute  h-0.5 w-7 text-[#a83234] bg-current transform  transition duration-500 ease-in-out ${
+                  toggle ? "-rotate-45" : "translate-y-1.5"
+                }`}
+              ></span>
+            </div>
           </button>
         </div>
       </div>
 
       <div
         className={
-          toggle ? "absolute z-10 p-4 w-full px-8 md:hidden" : "hidden"
+          toggle
+            ? "z-10 p-4 w-full px-8 text-black bg-white md:hidden transition-transform transform translate-x-0"
+            : "hidden"
         }
       >
         <ul>

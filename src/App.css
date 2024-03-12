@@ -24,6 +24,10 @@
   font-weight: bold; /* Optionally, make the active item bold */
 }
 
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;

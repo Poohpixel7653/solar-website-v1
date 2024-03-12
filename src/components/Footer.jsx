@@ -4,58 +4,29 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
 import { CiBasketball } from "react-icons/ci";
 import { contact } from "../data/contact";
 
-const Footer = ({ refFooter }) => {
+const Footer = ({ id }) => {
   return (
-    <div ref={refFooter} className="w-full bg-white py-24">
+    <div id={id} className="w-full bg-white py-24">
       <div className="md:max-w-[1480px] m-auto grid md:grid-cols-5 max-[780px]:grid-cols-2 gap-8 max-w-[600px]">
         <div className="col-span-4">
           <img src={logo} className="h-[50px]" />
           <h3 className="text-2xl font-bold mt-10">Contact Us</h3>
           <h3 className="py-2 text-[#6D737A]">Call : {contact.number}</h3>
-          <h3 className="py-2 text-[#6D737A]">Address : {contact.address}
-          </h3>
+          <h3 className="py-2 text-[#6D737A]">Address : {contact.address}</h3>
           <h3 className="py-2 text-[#6D737A]">Email : {contact.email}</h3>
           <div className="flex gap-4 py-4">
-            <a className="p-4 bg-[#E9F8F3] rounded-xl" href={contact.facebook}>
-              <FaFacebookF
-                size={25}
-                style={{
-                  color: "#4DC39E",
-                }}
-              />
+            <a
+              className="p-4 bg-[#E9F8F3] rounded-xl text-[#4DC39E] hover:bg-[#20B486] hover:text-[#E9F8F3]"
+              href={contact.facebook}
+            >
+              <FaFacebookF size={25} />
             </a>
-            <div className="p-4 bg-[#E9F8F3] rounded-xl">
-              <CiBasketball
-                size={25}
-                style={{
-                  color: "#4DC39E",
-                }}
-              />
-            </div>
-            <div className="p-4 bg-[#E9F8F3] rounded-xl">
-              <FaLinkedinIn
-                size={25}
-                style={{
-                  color: "#4DC39E",
-                }}
-              />
-            </div>
-            <div className="p-4 bg-[#E9F8F3] rounded-xl">
-              <FaInstagram
-                size={25}
-                style={{
-                  color: "#4DC39E",
-                }}
-              />
-            </div>
-            <div className="p-4 bg-[#E9F8F3] rounded-xl">
-              <FaFacebookF
-                size={25}
-                style={{
-                  color: "#4DC39E",
-                }}
-              />
-            </div>
+            <a
+              className="p-4 bg-[#E9F8F3] rounded-xl text-[#4DC39E] hover:bg-[#20B486] hover:text-[#E9F8F3]"
+              href="#"
+            >
+              <CiBasketball size={25} />
+            </a>
           </div>
         </div>
 
@@ -73,7 +44,6 @@ const Footer = ({ refFooter }) => {
             <textarea
               className="bg-[#F2F3F4] p-4 w-full rounded my-4 px-5"
               placeholder="Text Here"
-              
             />
             <button
               className="

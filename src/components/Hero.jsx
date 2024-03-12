@@ -1,11 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
-import { hero, house, video } from "../assets";
+import { hero, house } from "../assets";
 import HeroCard from "./HeroCard";
+import { projects } from "../data/project";
 
 const Hero = ({ id }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [info, setInfo] = useState({
+    installed: 0,
+    watt: 0,
+  });
 
   useEffect(() => {
+    let installed = projects.length;
+    let watt = projects
+      .map((project) => project.kwp)
+      .reduce((acc, amount) => acc + amount);
+
+    setInfo({
+      installed: installed,
+      watt: parseInt(watt),
+    });
+
     let lastScrollTop = 0;
     const handleScroll = () => {
       const currentScroll =
@@ -33,9 +48,9 @@ const Hero = ({ id }) => {
         {/* <img
           src={house}
           alt="Background"
-          className="w-full h-auto md:h-full object-cover"
+          className="w-full object-cover"
         /> */}
-        <video autoPlay loop muted class="w-full h-full">
+        <video autoPlay loop muted class="md:w-full">
           <source
             src="https://bucket-poohtest.s3.ap-southeast-1.amazonaws.com/video/dji_fly_20230920_100250_112_1695548695648_quickshot.mp4"
             type="video/mp4"
@@ -44,16 +59,15 @@ const Hero = ({ id }) => {
 
         <div
           className={`absolute transition-opacity duration-1000 md:max-w-[1400px]
-          m-auto
-          max-w-[600px] ${isVisible ? "opacity-100" : "opacity-0"}`}
+          m-auto ${isVisible ? "opacity-100" : "opacity-0"}`}
         >
-          <p className="text-xl py-2 md:text-5xl text-white font-medium">
+          <p className="text-xl py-2 lg:text-5xl md:text-xl text-white font-medium">
             SAVE ENERGY SAFETY WITH OUR SOLAR CELL SYSTEM
           </p>
-          <span className="text-xs py-2 md:text-3xl text-white font-medium">
+          <span className="text-xs py-2 lg:text-3xl md:text-2xl text-white font-medium">
             BY Mono Energy Contruction co.,ltd.
           </span>
-          <p className="py-2 text-xs md:text-lg text-white font-medium mt-5">
+          <p className="hidden md:block py-2 text-xs lg:text-lg md:text-sm text-white font-medium mt-5">
             ระบบเซลล์แสงอาทิตย์เป็นระบบที่ผลิตไฟฟ้าจากแสงอาทิตย์
             ซึ่งเป็นพลังงานหมุนเวียนที่สะอาด ปลอดภัย และยั่งยืน
             ระบบเซลล์แสงอาทิตย์ช่วยลดการพึ่งพาเชื้อเพลิงฟอสซิล
@@ -64,26 +78,30 @@ const Hero = ({ id }) => {
           </p>
 
           <div className="hidden md:block mt-10">
-            <HeroCard />
+            <HeroCard
+              installed={info.installed}
+              watt={info.watt}
+              province={77}
+            />
           </div>
         </div>
 
         <div
-          className={`absolute transition-opacity duration-1000 md:max-w-[1400px]
+          className={`hidden md:block absolute transition-opacity duration-1000 md:max-w-[1400px]
           m-auto
           max-w-[600px] ${!isVisible ? "opacity-100" : "opacity-0"}`}
         >
-          <p className="text-xl py-2 md:text-5xl text-white font-medium">
+          <p className="text-xl py-2 lg:text-5xl md:text-xl text-white font-medium">
             เกี่ยวกับ{" "}
             <span className="md:leading-[72px] text-6xl font-bold">
               Mono Energy Contruction co.,ltd.
             </span>
           </p>
-          <p className="py-2 text-xs md:text-2xl font-medium text-[#7ce6b6]">
+          <p className="text-xs py-2 lg:text-3xl md:text-2xl font-medium text-[#7ce6b6]">
             โมโน เอ็นเนอร์ยี่ คอนสตรัคชั่น:
             ผู้เชี่ยวชาญด้านพลังงานแสงอาทิตย์สู่พลังงานสะอาด
           </p>
-          <p className="py-2 text-xs md:text-lg text-white font-medium">
+          <p className="hidden md:block py-2 text-xs lg:text-lg md:text-sm text-white font-medium mt-5">
             โมโน เอ็นเนอร์ยี่ คอนสตรัคชั่น จำกัด
             ก่อตั้งขึ้นจากความมุ่งมั่นที่จะนำพลังงานแสงอาทิตย์มาใช้ประโยชน์อย่างมีประสิทธิภาพสูงสุด
             ด้วยวิสัยทัศน์ในการเป็นผู้นำด้านพลังงานแสงอาทิตย์ที่มุ่งมั่นพัฒนาและส่งมอบโซลูชั่นพลังงานสะอาดที่ครบวงจร

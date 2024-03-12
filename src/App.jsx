@@ -13,25 +13,22 @@ import { RevealOnScroll } from "./utils/revealOnScroll";
 
 function App() {
   return (
-    <>
+    <section>
       <NavBar />
-      <Hero />
-      {/* <RevealOnScroll>
-        <About />
-      </RevealOnScroll> */}
+      <Hero id="home" />
       <RevealOnScroll>
-        <Service />
+        <Service id="service" />
       </RevealOnScroll>
       <RevealOnScroll>
-        <CustomerMap />
+        <CustomerMap id="map" />
       </RevealOnScroll>
       <RevealOnScroll>
-        <CustomerFeedback />
+        <CustomerFeedback id="feedback" />
       </RevealOnScroll>
       <RevealOnScroll>
-        <Footer />
+        <Footer id="contact" />
       </RevealOnScroll>
-    </>
+    </section>
   );
 }
 

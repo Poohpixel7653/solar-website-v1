@@ -10,7 +10,7 @@ const ServiceCard = ({ title,desc, onHover, image }) => {
 
   return (
     <div
-      className="w-[200px] p-4 flex flex-col items-center justify-center gap-4 text-white  hover:text-[#649e70] font-bold hover:cursor-pointer"
+      className="w-[200px] lg:w-[100px] p-4 flex flex-col items-center justify-center gap-4 text-white  hover:text-[#649e70] font-bold hover:cursor-pointer"
       onMouseEnter={() => {
         onHovered(title);
         onHover(image,desc);

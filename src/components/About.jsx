@@ -8,7 +8,6 @@ const About = ({ id }) => {
       id={id}
       className="
         w-full
-        h-[100vh]
         bg-[#7a8486]
         py-24
     "
