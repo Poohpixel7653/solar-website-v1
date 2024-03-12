@@ -12,10 +12,10 @@ export const projects = [
       lng: 101.09860729882809,
     },
     images: [
-      "../../media-data/images/18381.jpg",
-      "../../media-data/images/18389.jpg",
-      "../../media-data/images/18396.jpg",
-      "../../media-data/images/18397.jpg",
+      "/media-data/images/18381.jpg",
+      "/media-data/images/18389.jpg",
+      "/media-data/images/18396.jpg",
+      "/media-data/images/18397.jpg",
     ],
   },
   {
@@ -33,10 +33,10 @@ export const projects = [
       lng: 100.36912052709737,
     },
     images: [
-      "../../media-data/images/DJI_0691_0.jpg",
-      "../../media-data/images/DJI_0692_0.jpg",
-      "../../media-data/images/DJI_0694_0.jpg",
-      "../../media-data/images/DJI_0695_0.jpg",
+      "/media-data/images/DJI_0691_0.jpg",
+      "/media-data/images/DJI_0692_0.jpg",
+      "/media-data/images/DJI_0694_0.jpg",
+      "/media-data/images/DJI_0695_0.jpg",
     ],
   },
   {
@@ -55,9 +55,9 @@ export const projects = [
       lng: 99.65743238014282,
     },
     images: [
-      "../../media-data/images/LINE_ALBUM_ctp_๒๓๐๘๑๗_13.jpg",
-      "../../media-data/images/LINE_ALBUM_ctp_๒๓๐๘๑๗_15.jpg",
-      "../../media-data/images/LINE_ALBUM_ctp_๒๓๐๘๑๗_16.jpg",
+      "/media-data/images/LINE_ALBUM_ctp_๒๓๐๘๑๗_13.jpg",
+      "/media-data/images/LINE_ALBUM_ctp_๒๓๐๘๑๗_15.jpg",
+      "/media-data/images/LINE_ALBUM_ctp_๒๓๐๘๑๗_16.jpg",
     ],
   },
   {
@@ -74,10 +74,10 @@ export const projects = [
       lng: 100.42026525402433,
     },
     images: [
-      "../../media-data/images/16980.jpg",
-      "../../media-data/images/16985.jpg",
-      "../../media-data/images/16989.jpg",
-      "../../media-data/images/16992.jpg",
+      "/media-data/images/16980.jpg",
+      "/media-data/images/16985.jpg",
+      "/media-data/images/16989.jpg",
+      "/media-data/images/16992.jpg",
     ],
   },
   {
@@ -94,11 +94,11 @@ export const projects = [
       lng: 101.55539823213398,
     },
     images: [
-      "../../media-data/images/LINE_ALBUM_meadolc24766_๒๓๐๗๒๕_24.jpg",
-      "../../media-data/images/1.jpg",
-      "../../media-data/images/13.jpg",
-      "../../media-data/images/2.jpg",
-      "../../media-data/images/4.jpg",
+      "/media-data/images/LINE_ALBUM_meadolc24766_๒๓๐๗๒๕_24.jpg",
+      "/media-data/images/1.jpg",
+      "/media-data/images/13.jpg",
+      "/media-data/images/2.jpg",
+      "/media-data/images/4.jpg",
     ],
   },
   {
@@ -115,10 +115,10 @@ export const projects = [
       lng: 100.34388585728053,
     },
     images: [
-      "../../media-data/images/14503_0.jpg",
-      "../../media-data/images/22229.jpg",
-      "../../media-data/images/219695.jpg",
-      "../../media-data/images/14505_0.jpg",
+      "/media-data/images/14503_0.jpg",
+      "/media-data/images/22229.jpg",
+      "/media-data/images/219695.jpg",
+      "/media-data/images/14505_0.jpg",
     ],
   },
   {
@@ -135,10 +135,10 @@ export const projects = [
       lng: 100.83261208475245,
     },
     images: [
-      "../../media-data/images/ED4A40F8-1CB7-465C-A3CB-BE30B7D7B5AA.jpg",
-      "../../media-data/images/LINE_ALBUM_SCI Electric_๒๓๑๑๑๔_3.jpg",
-      "../../media-data/images/LINE_ALBUM_SCI Electric_๒๓๑๑๑๔_5.jpg",
-      "../../media-data/images/LINE_ALBUM_SCI Electric_๒๓๑๑๑๔_9.jpg",
+      "/media-data/images/ED4A40F8-1CB7-465C-A3CB-BE30B7D7B5AA.jpg",
+      "/media-data/images/LINE_ALBUM_SCI Electric_๒๓๑๑๑๔_3.jpg",
+      "/media-data/images/LINE_ALBUM_SCI Electric_๒๓๑๑๑๔_5.jpg",
+      "/media-data/images/LINE_ALBUM_SCI Electric_๒๓๑๑๑๔_9.jpg",
     ],
   },
   {
@@ -155,10 +155,10 @@ export const projects = [
       lng: 100.31550249997011,
     },
     images: [
-      "../../media-data/images/LINE_ALBUM_ความคืบหน้างานยูเนี่ยน290923_๒๓๑๓_1.jpg",
-      "../../media-data/images/LINE_ALBUM_ความคืบหน้างานยูเนี่ยน290923_๒๓๑๓_2.jpg",
-      "../../media-data/images/LINE_ALBUM_รูปงานเก็บpunch list งานยูเนี่ยน 141023_๒๓๑๓_1.jpg",
-      "../../media-data/images/LINE_ALBUM_รูปงานเก็บpunch list งานยูเนี่ยน 141023_๒๓๑๓_3.jpg",
+      "/media-data/images/LINE_ALBUM_ความคืบหน้างานยูเนี่ยน290923_๒๓๑๓_1.jpg",
+      "/media-data/images/LINE_ALBUM_ความคืบหน้างานยูเนี่ยน290923_๒๓๑๓_2.jpg",
+      "/media-data/images/LINE_ALBUM_รูปงานเก็บpunch list งานยูเนี่ยน 141023_๒๓๑๓_1.jpg",
+      "/media-data/images/LINE_ALBUM_รูปงานเก็บpunch list งานยูเนี่ยน 141023_๒๓๑๓_3.jpg",
     ],
   },
 ];
