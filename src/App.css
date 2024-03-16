@@ -28,6 +28,14 @@
   scroll-behavior: smooth;
 }
 
+iframe {
+  display: block;       /* iframes are inline by default */
+  background: #000;
+  border: none;         /* Reset default border */
+  height: 100vh;        /* Viewport-relative units */
+  width: 100vw;
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;

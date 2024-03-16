@@ -36,7 +36,7 @@ const Navbar = ({ onClick }) => {
       className={`w-full h-[96px] ${
         currentScrollPos <= 50
           ? "md:bg-transparent text-white bg-white"
-          : "sticky top-0 z-50 bg-white text-[#506f72] shadow-md"
+          : "sticky top-0 z-50 bg-[#2F4F4F] text-white shadow-md"
       } transition-colors duration-500 ease-in-out md:fixed z-40`}
     >
       <div className="md:max-w-[1400px] m-auto w-full flex justify-between items-center px-10">

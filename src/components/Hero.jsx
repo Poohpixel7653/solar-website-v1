@@ -52,7 +52,7 @@ const Hero = ({ id }) => {
         /> */}
         <video autoPlay loop muted class="md:w-full">
           <source
-            src="https://bucket-poohtest.s3.ap-southeast-1.amazonaws.com/video/dji_fly_20230920_100250_112_1695548695648_quickshot.mp4"
+            src="https://bucket-poohtest.s3.ap-southeast-1.amazonaws.com/video/Solar Home V2.mp4"
             type="video/mp4"
           />
         </video>
@@ -77,13 +77,13 @@ const Hero = ({ id }) => {
             หากท่านสนใจติดตั้งระบบเซลล์แสงอาทิตย์ สามารถติดต่อเราได้
           </p>
 
-          <div className="hidden md:block mt-10">
+          {/* <div className="hidden md:block mt-10">
             <HeroCard
               installed={info.installed}
               watt={info.watt}
               province={77}
             />
-          </div>
+          </div> */}
         </div>
 
         <div

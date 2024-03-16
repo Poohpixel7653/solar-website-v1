@@ -15,14 +15,15 @@ import { projects } from "../data/project";
 
 const CustomerFeedback = ({ id }) => {
   return (
-    <div id={id} className="w-full bg-[#F0FBF7] py-24">
+    // F0FBF7
+    <div id={id} className="w-full bg-[#708090] py-24"> 
       <div className="md:max-w-[1400px] m-auto max-w-[600px] relative">
         <h1 className="md:leading-[72px] text-3xl font-bold">
-          MONO<span className="text-[#509274]"> Feedback</span>
+          MONO<span className="text-[#6abe99]"> Feedback</span>
         </h1>
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-[#d1d1d1]">
           ผลงานที่ผ่านมาของ{" "}
-          <span className="text-[#509274]">
+          <span className="text-[#6abe99]">
             {" "}
             Mono Energy Contruction co.,ltd.
           </span>
