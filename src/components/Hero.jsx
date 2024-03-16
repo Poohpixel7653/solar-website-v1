@@ -52,7 +52,7 @@ const Hero = ({ id }) => {
         /> */}
         <video autoPlay loop muted class="md:w-full">
           <source
-            src="https://bucket-poohtest.s3.ap-southeast-1.amazonaws.com/video/Solar Home V2.mp4"
+            src="https://bucket-poohtest.s3.ap-southeast-1.amazonaws.com/video/solar home v1- สร้างด้วย Clipchamp.mp4"
             type="video/mp4"
           />
         </video>
