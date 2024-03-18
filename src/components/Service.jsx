@@ -60,7 +60,7 @@ const Service = ({ id }) => {
 
   return (
     // F0FBF7
-    <div id={id} className="w-full h-[100vh] bg-[#3c5555] py-24">
+    <div id={id} className="w-full bg-[#3c5555] py-24">
       <div
         className="md:max-w-[1400px]
             m-auto
