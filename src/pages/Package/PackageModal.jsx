@@ -1,6 +1,7 @@
 import React from "react";
 
 const PackageModal = ({ data, onClose }) => {
+  console.log(data);
   return (
     <div
       class="relative z-10"
@@ -40,14 +41,17 @@ const PackageModal = ({ data, onClose }) => {
               </h1>
               <div class="relative h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
                 <img
-                  src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
-                  class="h-full w-[500px] object-cover"
+                  src={
+                    data.picture_url ||
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png"
+                  }
+                  class="h-full object-cover"
                 />
               </div>
               <div>
                 <div class="mb-2 mt-2 items-center">
                   <h1 className="font-medium text-5xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                    1P3KW-S-01
+                    {data.code || ""}
                   </h1>
                 </div>
 
@@ -61,7 +65,7 @@ const PackageModal = ({ data, onClose }) => {
                         ยี่ห้อแผงโซลาร์เซลล์
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        RUNERGY
+                        {data.pv_panel_brand}
                       </h1>
                     </div>
 
@@ -92,14 +96,14 @@ const PackageModal = ({ data, onClose }) => {
                       </h1>
                     </div>
 
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
                         Solar Panel Datasheet
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                         Runergy_545W.pdf
                       </h1>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -113,7 +117,7 @@ const PackageModal = ({ data, onClose }) => {
                         ยี่ห้ออินเวอร์เตอร์
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        KSTAR
+                        {data.inverter_brand}
                       </h1>
                     </div>
 
@@ -153,18 +157,18 @@ const PackageModal = ({ data, onClose }) => {
                       </h1>
                     </div>
 
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
                         Inverter Datasheet
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                         Kstar_Inverter_3K.pdf
                       </h1>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
-                <div className="mt-5">
+                {/* <div className="mt-5">
                   <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                     ข้อมูลสำหรับแพ็กเกจ Optimizer / Micro Inverter
                   </h1>
@@ -214,7 +218,7 @@ const PackageModal = ({ data, onClose }) => {
                       </h1>
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="mt-20">
                   <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
@@ -226,7 +230,7 @@ const PackageModal = ({ data, onClose }) => {
                       className="w-full min-h-full"
                       width="100%"
                       height="100%"
-                      src="https://www.computing.psu.ac.th/th/wp-content/uploads/2014/03/sample-pdf.pdf"
+                      src={data.pv_panel_pdf}
                       title="pdf-title"
                     ></iframe>
                   </div>

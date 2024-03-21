@@ -2,17 +2,20 @@ import React from "react";
 
 const PackageCard = ({ data, onClick }) => {
   return (
-    <div className="group" onClick={onClick}>
+    <div className="group" onClick={() => onClick(data)}>
       <div class="relative flex flex-col rounded-xl border bg-white bg-clip-border text-gray-700 shadow-md group-hover:shadow-2xl group-hover:cursor-pointer">
         <div class="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
           <img
-            src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=927&amp;q=80"
+            src={
+              data.picture_url ||
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/2048px-No_image_available.svg.png"
+            }
             class="h-full w-full object-cover"
           />
         </div>
-        <div className="absolute top-5 right-5 bg-[#509274] text-white p-2 rounded-2xl  leading-none flex items-center">
+        {/* <div className="absolute top-5 right-5 bg-[#509274] text-white p-2 rounded-2xl  leading-none flex items-center">
           {data.package}
-        </div>
+        </div> */}
         <div class="p-6  divide-y">
           <div class="mb-2 flex items-center justify-between">
             <p class="block  text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
@@ -29,7 +32,7 @@ const PackageCard = ({ data, onClick }) => {
                   รหัสแพ็กเกจ
                 </p>
                 <p class="block  text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-                  {data.package_id || ""}
+                  {data.code || ""}
                 </p>
               </div>
 
@@ -62,7 +65,6 @@ const PackageCard = ({ data, onClick }) => {
           </button>
         </div>
       </div>
-      
     </div>
   );
 };

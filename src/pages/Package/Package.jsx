@@ -5,23 +5,19 @@ import { packages_data } from "../../data/package";
 import PackageModal from "./PackageModal";
 
 const phases = [
-  "1 เฟส | 3kW",
-  "1 เฟส | 5kW",
-  "3 เฟส | 10kW",
-  "3 เฟส | 15kW",
-  "3 เฟส | 20kW",
+  "1 Phase | 3 kW",
+  "1 Phase | 5 kW",
+  "3 Phase | 10 kW",
+  "3 Phase | 15 kW",
+  "3 Phase | 20 kW",
+  "3 Phase | 30 kW",
+  "3 Phase | 50 kW",
+  "3 Phase | 100 kW",
 ];
 
-const solar_brand = ["FULL SOLAR", "LONGI", "RUNERGY", "ZNSHINE SOLAR"];
+const solar_brand = ["TW SOLAR"];
 
-const inverter_brand = [
-  "GROWATT",
-  "Hoymiles",
-  "HUAWEI",
-  "KSTAR",
-  "SolarEdge",
-  "SUNGROW",
-];
+const inverter_brand = ["HUAWEI"];
 
 const packages = [
   "ไม่ติดตั้ง Rapid Shutdown",
@@ -29,10 +25,32 @@ const packages = [
   "ติดตั้ง Optimizer หรือ Micro Inverter",
 ];
 
-let Selected = [];
+let phasePowers = [];
+let pvList = [];
+let inverterList = [];
 
 const Package = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [packageData, setPackageData] = useState(null);
+
+  const [filteredProducts, setFilteredProducts] = useState(packages_data);
+
+  const [selectedPhases, setselectedPhases] = useState([]);
+
+  const togglePhase = (phase) => {
+    if (selectedPhases.includes(phase)) {
+      setselectedPhases(
+        selectedPhases.filter((selectedPhase) => selectedPhase !== phase)
+      );
+    } else {
+      setselectedPhases([...selectedPhases, phase]);
+    }
+  };
+
+  const clickHandler = (data) => {
+    setPackageData(data);
+    openModalHandler();
+  };
 
   const openModalHandler = () => {
     setModalOpen(true);
@@ -40,18 +58,55 @@ const Package = () => {
 
   const closeModalHandler = () => {
     setModalOpen(false);
+    setPackageData(null);
+  };
+
+  const filterProducts = () => {
+    if (!phasePowers.length && !pvList.length && !inverterList.length) {
+      setFilteredProducts(packages_data);
+      return;
+    }
+
+    const newFilteredProducts = packages_data.filter((product) => {
+      return phasePowers.some((power) => product.phase_power.includes(power));
+    });
+    setFilteredProducts(newFilteredProducts);
+  };
+
+  const filterPVSolar = () => {
+    if (!phasePowers.length && !pvList.length && !inverterList.length) {
+      setFilteredProducts(packages_data);
+      return;
+    }
+
+    const newFilteredProducts = packages_data.filter((product) =>
+      pvList.some((brand) => product.pv_panel_brand.includes(brand))
+    );
+    setFilteredProducts(newFilteredProducts);
+  };
+
+  const filterInverterSolar = () => {
+    if (!phasePowers.length && !pvList.length && !inverterList.length) {
+      setFilteredProducts(packages_data);
+      return;
+    }
+
+    const newFilteredProducts = packages_data.filter((product) =>
+      inverterList.some((inverter) => product.inverter_brand.includes(inverter))
+    );
+    setFilteredProducts(newFilteredProducts);
   };
 
   return (
     <div className="w-full bg-[#F0FBF7] py-24">
       <div className="md:max-w-[1400px] m-auto grid md:grid-cols-1">
         <div className="flex justify-center">
-        <h1 className="md:leading-[72px] text-5xl font-bold">
-          แพ็กเกจ<span className="text-[#509274]"> Solar Rooftop</span>
-        </h1>
+          <h1 className="md:leading-[72px] text-5xl font-bold">
+            แพ็กเกจ<span className="text-[#509274]"> Solar Rooftop</span>
+          </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10">
-          <div className="grid md:col-span-1 gap-10 text-center">
+          <div className="text-center">
             <div className="mb-5">
               <h1>เฟส | กำลังติดตั้ง</h1>
               <div className="grid grid-cols-3 md:grid-cols-1">
@@ -61,7 +116,13 @@ const Package = () => {
                       key={phase}
                       name={phase}
                       onClick={(name) => {
-                        Selected.push(name);
+                        if (phasePowers.indexOf(name) > -1) {
+                          phasePowers.splice(phasePowers.indexOf(name), 1);
+                        } else {
+                          phasePowers.push(name);
+                        }
+
+                        filterProducts(phasePowers);
                       }}
                     />
                   );
@@ -73,36 +134,58 @@ const Package = () => {
               <h1>ยี่ห้อแผงโซลาร์เซลล์</h1>
               <div className="grid grid-cols-3 md:grid-cols-1">
                 {solar_brand.map((solar) => (
-                  <FilterButton key={solar} name={solar} />
+                  <FilterButton
+                    key={solar}
+                    name={solar}
+                    onClick={(solar) => {
+                      if (pvList.indexOf(solar) > -1) {
+                        pvList.splice(pvList.indexOf(solar), 1);
+                      } else {
+                        pvList.push(solar);
+                      }
+                      filterPVSolar();
+                    }}
+                  />
                 ))}
               </div>
             </div>
 
             <div className="mb-5">
-              <h1>ยี่ห้อแผงโซลาร์เซลล์</h1>
+              <h1>ยี่ห้ออินเวอเตอร์</h1>
               <div className="grid grid-cols-3 md:grid-cols-1">
                 {inverter_brand.map((inverter) => (
-                  <FilterButton key={inverter} name={inverter} />
+                  <FilterButton
+                    key={inverter}
+                    name={inverter}
+                    onClick={(inverter) => {
+                      if (inverterList.indexOf(inverter) > -1) {
+                        inverterList.splice(inverterList.indexOf(inverter), 1);
+                      } else {
+                        inverterList.push(inverter);
+                      }
+                      filterInverterSolar();
+                    }}
+                  />
                 ))}
               </div>
             </div>
 
-            <div className="mb-5">
+            {/* <div className="mb-5">
               <h1>แพ็กเกจ</h1>
               <div className="grid grid-cols-3 md:grid-cols-1">
                 {packages.map((_package) => (
                   <FilterButton key={_package} name={_package} />
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="col-span-3">
             <div className="grid grid-cols-2 md:grid-cols-3  gap-4">
-              {packages_data.map((item) => (
-                <PackageCard data={item} onClick={openModalHandler} />
+              {filteredProducts.map((item) => (
+                <PackageCard data={item} onClick={clickHandler} />
               ))}
             </div>
-
+            {/* 
             <div class="flex w-full items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
               <div class="w-full  flex items-center justify-between border-t border-gray-200">
                 <div class="flex items-center pt-3 text-gray-600 hover:text-[#509274] cursor-pointer">
@@ -196,12 +279,14 @@ const Package = () => {
                   </svg>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
-      {modalOpen ? <PackageModal onClose={closeModalHandler} /> : null}
+      {modalOpen && packageData ? (
+        <PackageModal data={packageData} onClose={closeModalHandler} />
+      ) : null}
     </div>
   );
 };
