@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { logo } from "../assets";
 import scrollToComponent from "../utils/ScrollUtils";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ onClick }) => {
   const [toggle, setToggle] = useState(false);
@@ -61,6 +62,16 @@ const Navbar = ({ onClick }) => {
               className={`menu-item ${activeItem === "Home" ? "active" : ""}`}
             >
               Home
+            </li>
+            <li
+              onClick={() => {}}
+              className={`menu-item ${
+                activeItem === "Product" ? "active" : ""
+              }`}
+            >
+              <Link to="/package-list">
+              Product
+            </Link>
             </li>
             <li
               onClick={() => {
