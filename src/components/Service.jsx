@@ -10,24 +10,21 @@ const SolarService = [
     title: "Engineering",
     description:
       "ออกแบบระบบโซล่าเซลล์ให้ถูกต้องตามมารฐานสํารวจหน้างานประเมินการใช้ไฟของลูกค้า",
-    image:
-      "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=2058&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/media-data/images/service_3.png",
   },
   {
     id: 2,
     title: "Procurement",
     description:
       "เลือกผลิตภัณฑ์ที่เหมาะสมกับความต้องการของลูกค้าและมีคุณภาพพร้อมมาตรฐานในราคาที่ถูก",
-    image:
-      "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/media-data/images/service_2.jpg",
   },
   {
     id: 3,
     title: "Construction",
     description:
       "ดําเนินการโครงการตามที่ออกแบบไว้ พร้อมทีมงานและเครื่องมือที่ครบทั้งโครงการ โดยคํานึงถึงความปลอดภัย",
-    image:
-      "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/media-data/images/service_1.jpg",
   },
 ];
 
@@ -130,12 +127,11 @@ const Service = ({ id }) => {
           <div
             className="h-[300px] lg:h-[500px] mt-4 bg-center bg-cover bg-no-repeat transition-background-image duration-300 group relative m-0 flex rounded-xl shadow-xl"
             style={{
-              backgroundImage: `url(${
+              backgroundImage: `${
                 hoveredImage ? hoveredImage : SolarService[0].image
-              })`,
+              }`,
             }}
           >
-
             <div className="w-full mt-auto justify-center justify-items-center items-center gap-6 bottom-0">
               <div className="justify-center w-[100%] gap-6 bottom-40">
                 <p className="text-xl text-white p-10">

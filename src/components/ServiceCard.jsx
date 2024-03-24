@@ -16,7 +16,7 @@ const ServiceCard = ({ title,desc, onHover, image }) => {
         onHover(image,desc);
       }}
     >
-      <FaSolarPanel size={40} className="white" />
+      {/* <FaSolarPanel size={40} className="white" /> */}
       <h1 className="text-lg text-center">{title}</h1>
     </div>
   );
