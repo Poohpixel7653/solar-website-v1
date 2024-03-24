@@ -165,4 +165,217 @@ export const projects = [
       "/media-data/images/LINE_ALBUM_รูปงานเก็บpunch list งานยูเนี่ยน 141023_๒๓๑๓_3.jpg",
     ],
   },
+  {
+    id: 9,
+    name: "HOME POTTERY SOLAR ROOF TOP",
+    kwp: 407.67,
+    panel: 151,
+    inverter: 3,
+    description: `งานติดตั้งระบบโซล่าเซลล์ ขนาด 407.67 กิโลวัตต์
+    ระบบออนกริด สามารถผลิตไฟไฟ้าในช่วงกลางวัน เพื่อลดการใช้ไฟของโรงงาน
+    โดยใช้อินเวอร์เตอร์ขนาด 110 กิโลวัตต์ จำนวน 3 เครื่อง 
+    แผงโซล่าเซลล์ ขนาด 535 วัตต์ จำนวน 762 แผ่น 
+    พร้อม Rapid Shutdown เพื่อป้องกันการทำงานผิดปกติของแผงโซล่าเซลล์`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/home_pottery_3.jpg",
+      "/media-data/images/home_pottery_1.jpg",
+      "/media-data/images/home_pottery_2.jpg",
+      "/media-data/images/home_pottery_4.jpg",
+    ],
+  },
+  {
+    id: 10,
+    name: "บริษัท ที.พี.ฟาร์เมอร์ จำกัด",
+    kwp: null,
+    panel: 18,
+    inverter: 1,
+    description: `ระบบออนกริด ที่ บริษัท ที.พี.ฟาร์เมอร์ จำกัด
+    โดยใช้ Inverter HUAWEI ขนาด 10 kW
+     แผงโซล่าเซลล์ LONGi 540W Mono Half-Cell 540W จำนวน 18 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/pt_farmer_4.jpg",
+      "/media-data/images/pt_farmer_1.jpg",
+      "/media-data/images/pt_farmer_2.jpg",
+      "/media-data/images/pt_farmer_3.jpg",
+      "/media-data/images/pt_farmer_5.jpg",
+    ],
+  },
+  {
+    id: 11,
+    name: "Fuengfah Riverside Garden Resort Chiang Mai",
+    kwp: null,
+    panel: 30,
+    inverter: 2,
+    description: `ระบบออนกริด ที่ Fuengfah Riverside Garden Resort Chiang Mai
+    โดยใช้ Inverter HUAWEI ขนาด 5 และ 10 kW
+     แผงโซล่าเซลล์ LONGi 545W Mono Half-Cell 545W จำนวน 30 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/fuengfah_riverside_1.jpg",
+      "/media-data/images/fuengfah_riverside_2.jpg",
+      "/media-data/images/fuengfah_riverside_3.jpg",
+      "/media-data/images/fuengfah_riverside_4.jpg",
+    ],
+  },
+  {
+    id: 12,
+    name: "Chix Diamond บางแค",
+    kwp: null,
+    panel: 72,
+    inverter: 1,
+    description: `ระบบออนกริด ลูกค้า Chix Diamond บางแค
+    โดยใช้ Inverter HUAWEI ขนาด 50 kW
+    แผงโซล่าเซลล์ LONGi 545W Mono Half-Cell 545W จำนวน 72 แผ่น
+    พร้อมระบบ Mornitoring WalkWay ระบบน้ำทำความสะอาด บันไดสำหรับ Service`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/chix_diamond_3.jpg",
+      "/media-data/images/chix_diamond_2.jpg",
+      "/media-data/images/chix_diamond_1.jpg",
+    ],
+  },
+  {
+    id: 13,
+    name: "Solar Rooftop จังหวัดเพชรบูรณ์",
+    kwp: 133.1,
+    panel: 242,
+    inverter: 3,
+    description: `Solar Rooftop 133.1 kWp จังหวัดเพชรบูรณ์
+    โดยใช้ Inverter HUAWEI ขนาด 40 kW จำนวน 3 เครื่อง
+     แผงโซล่าเซลล์ LONGi  LR5-72 HPH 550W จำนวน 242 แผ่น
+    พร้อม WalkWay ระบบน้ำทำความสะอาด บันไดสำหรับ Service`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/solar_rooftop_133_1.jpg",
+      "/media-data/images/solar_rooftop_133_2.jpg",
+      "/media-data/images/solar_rooftop_133_3.jpg",
+    ],
+  },
+  {
+    id: 14,
+    name: "APARTMENT CHUMPHON SOLAR ROOF TOP",
+    kwp: 60.00,
+    panel: 100,
+    inverter: 1,
+    description: `APARTMENT CHUMPHON SOLAR ROOF TOP 60.00 kWp
+    โดยใช้ Inverter HUAWEI ขนาด 50 kW จำนวน 1 เครื่อง
+     แผงโซล่าเซลล์ Trina Tsm-deg20c Mono Half Cell 600w จำนวน 100 แผ่น
+    พร้อม WalkWay ระบบน้ำทำความสะอาด บันไดสำหรับ Service`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/APARTMENT_CHUMPHON_SOLAR_ROOF_TOP_2.jpg",
+      "/media-data/images/APARTMENT_CHUMPHON_SOLAR_ROOF_TOP_1.jpg",
+      "/media-data/images/APARTMENT_CHUMPHON_SOLAR_ROOF_TOP_3.jpg",
+    ],
+  },
+  {
+    id: 15,
+    name: "SJF FRAM RATCHBURI SOLAR FRAM",
+    kwp: 990.00,
+    panel: 1500,
+    inverter: 4,
+    description: ` งานติดตั้งแผงโซลาร์เซลล์ ที่ SJF FRAM RATCHBURI 
+    โดยใช้ Inverter HUAWEI ขนาด 200.00kW จำนวน 4 เครื่อง 
+    แผงโซลาร์เซลล์ TRINA 660Wp  จำนวน 1500 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      
+    ],
+  },
+  {
+    id: 16,
+    name: "SIPSO TROPICAL DRINK SOLAR",
+    kwp: 231.60,
+    panel: 386,
+    inverter: 2,
+    description: `งานติดตั้งแผงโซลาร์เซลล์ ที่ SIPSO TROPICAL DRINK
+    โดยใช้ Inverter Growatt ขนาด 125.00kW จำนวน 2 เครื่อง
+     แผงโซลาร์เซลล์ TRINA 600Wp  จำนวน 386 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      
+    ],
+  },
+  {
+    id: 17,
+    name: "SOLAR HOME 10.00 kW",
+    kwp: 10.00,
+    panel: 18,
+    inverter: 1,
+    description: `งานติดตั้งแผงโซลาร์เซลล์ ที่โครงการบ้านจัดสรร
+    โดยใช้ Inverter  ขนาด 10.00kW จำนวน 1 เครื่อง
+     แผงโซลาร์เซลล์ 545 Wp  จำนวน 18 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/solar_home_10_1.jpg",
+      "/media-data/images/solar_home_10_2.jpg",
+      "/media-data/images/solar_home_10_3.jpg"
+    ],
+  },
+  {
+    id: 18,
+    name: "SOUTHERN CHEMICALS Solar rooftop system",
+    kwp: 250.80,
+    panel: 418,
+    inverter: 2,
+    description: `งานติดตั้งแผงโซลาร์เซลล์ ที่โรงงานผลิตและจำหน่ายกรดซัลฟูริก สารส้ม และเคมีภัณฑ์
+    โดยใช้ Inverter ยี่ห้อ SMA  ขนาด 110kW จำนวน 2 เครื่อง
+    แผงโซลาร์เซลล์ ยี่ห้อ TRINA ขนาด 600W จำนวน 418 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/SOUTHERN_CHEMICALS_1.jpg",
+      "/media-data/images/SOUTHERN_CHEMICALS_2.jpg",
+      "/media-data/images/SOUTHERN_CHEMICALS_3.jpg"
+    ],
+  },
+  {
+    id: 19,
+    name: "SOLAR HOME 10.9 kW",
+    kwp: 10.9,
+    panel: 18,
+    inverter: 1,
+    description: `งานติดตั้งแผงโซลาร์เซลล์ ที่โครงการบ้านจัดสรร ติดตั้งบนดาดฟ้าโดยใช้เมาส์ติ้งพร้อมกับตุ้มปูน   พร้อมทั้งใช้ roof shield ป้องกันการรั่วซึมของดาดฟ้า
+    โดยใช้ Inverter  ขนาด 10.00kW จำนวน 1 เครื่อง
+     แผงโซลาร์เซลล์ 545 Wp  จำนวน 18 แผ่น`,
+    location: {
+      lat: null,
+      lng: null,
+    },
+    images: [
+      "/media-data/images/solar_home_10_9_1.jpg",
+      "/media-data/images/solar_home_10_9_2.jpg",
+    ],
+  },
 ];

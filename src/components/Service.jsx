@@ -98,7 +98,7 @@ const Service = ({ id }) => {
         </div>
 
         <div className="bg-transparent rounded-lg grid-cols-1">
-          <video
+          {/* <video
             autoPlay
             loop
             muted
@@ -126,8 +126,8 @@ const Service = ({ id }) => {
                 />
               ))}
             </div>
-          </div>
-          {/* <div
+          </div> */}
+          <div
             className="h-[300px] lg:h-[500px] mt-4 bg-center bg-cover bg-no-repeat transition-background-image duration-300 group relative m-0 flex rounded-xl shadow-xl"
             style={{
               backgroundImage: `url(${
@@ -153,7 +153,7 @@ const Service = ({ id }) => {
                 ))}
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
