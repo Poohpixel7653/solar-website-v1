@@ -58,7 +58,7 @@ const ClusterMap = ({ locations }) => {
   return (
     <ReactMapGL
       scrollZoom={false}
-      initialViewState={{ latitude: 13.736717, longitude: 100.523186, zoom: 6 }}
+      initialViewState={{ latitude: 13.736717, longitude: 100.523186, zoom: 5 }}
       mapboxAccessToken={MAPBOX_MAP_KEY}
       mapStyle="mapbox://styles/mapbox/streets-v11"
       ref={mapRef}

@@ -177,8 +177,8 @@ export const projects = [
     แผงโซล่าเซลล์ ขนาด 535 วัตต์ จำนวน 762 แผ่น 
     พร้อม Rapid Shutdown เพื่อป้องกันการทำงานผิดปกติของแผงโซล่าเซลล์`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 17.9083285668747,
+      lng: 99.34332380306677,
     },
     images: [
       "/media-data/images/home_pottery_3.jpg",
@@ -190,15 +190,15 @@ export const projects = [
   {
     id: 10,
     name: "บริษัท ที.พี.ฟาร์เมอร์ จำกัด",
-    kwp: null,
+    kwp: 10.0,
     panel: 18,
     inverter: 1,
     description: `ระบบออนกริด ที่ บริษัท ที.พี.ฟาร์เมอร์ จำกัด
     โดยใช้ Inverter HUAWEI ขนาด 10 kW
      แผงโซล่าเซลล์ LONGi 540W Mono Half-Cell 540W จำนวน 18 แผ่น`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 16.03440412515955,
+      lng: 100.37032983069204,
     },
     images: [
       "/media-data/images/pt_farmer_4.jpg",
@@ -211,15 +211,15 @@ export const projects = [
   {
     id: 11,
     name: "Fuengfah Riverside Garden Resort Chiang Mai",
-    kwp: null,
+    kwp: 16.35,
     panel: 30,
     inverter: 2,
     description: `ระบบออนกริด ที่ Fuengfah Riverside Garden Resort Chiang Mai
     โดยใช้ Inverter HUAWEI ขนาด 5 และ 10 kW
      แผงโซล่าเซลล์ LONGi 545W Mono Half-Cell 545W จำนวน 30 แผ่น`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 18.88562418752115,
+      lng: 98.97641403069204,
     },
     images: [
       "/media-data/images/fuengfah_riverside_1.jpg",
@@ -231,7 +231,7 @@ export const projects = [
   {
     id: 12,
     name: "Chix Diamond บางแค",
-    kwp: null,
+    kwp: 39.24,
     panel: 72,
     inverter: 1,
     description: `ระบบออนกริด ลูกค้า Chix Diamond บางแค
@@ -239,8 +239,8 @@ export const projects = [
     แผงโซล่าเซลล์ LONGi 545W Mono Half-Cell 545W จำนวน 72 แผ่น
     พร้อมระบบ Mornitoring WalkWay ระบบน้ำทำความสะอาด บันไดสำหรับ Service`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 13.68070567837565,
+      lng: 100.40940912226701,
     },
     images: [
       "/media-data/images/chix_diamond_3.jpg",
@@ -259,8 +259,8 @@ export const projects = [
      แผงโซล่าเซลล์ LONGi  LR5-72 HPH 550W จำนวน 242 แผ่น
     พร้อม WalkWay ระบบน้ำทำความสะอาด บันไดสำหรับ Service`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 15.447448621450874,
+      lng: 101.06776977012164,
     },
     images: [
       "/media-data/images/solar_rooftop_133_1.jpg",
@@ -271,7 +271,7 @@ export const projects = [
   {
     id: 14,
     name: "APARTMENT CHUMPHON SOLAR ROOF TOP",
-    kwp: 60.00,
+    kwp: 60.0,
     panel: 100,
     inverter: 1,
     description: `APARTMENT CHUMPHON SOLAR ROOF TOP 60.00 kWp
@@ -279,8 +279,8 @@ export const projects = [
      แผงโซล่าเซลล์ Trina Tsm-deg20c Mono Half Cell 600w จำนวน 100 แผ่น
     พร้อม WalkWay ระบบน้ำทำความสะอาด บันไดสำหรับ Service`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 10.502773657110657,
+      lng: 99.1837642554054,
     },
     images: [
       "/media-data/images/APARTMENT_CHUMPHON_SOLAR_ROOF_TOP_2.jpg",
@@ -291,41 +291,37 @@ export const projects = [
   {
     id: 15,
     name: "SJF FRAM RATCHBURI SOLAR FRAM",
-    kwp: 990.00,
+    kwp: 990.0,
     panel: 1500,
     inverter: 4,
     description: ` งานติดตั้งแผงโซลาร์เซลล์ ที่ SJF FRAM RATCHBURI 
     โดยใช้ Inverter HUAWEI ขนาด 200.00kW จำนวน 4 เครื่อง 
     แผงโซลาร์เซลล์ TRINA 660Wp  จำนวน 1500 แผ่น`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 13.694661610246788,
+      lng: 99.55364364926933,
     },
-    images: [
-      
-    ],
+    images: [],
   },
   {
     id: 16,
     name: "SIPSO TROPICAL DRINK SOLAR",
-    kwp: 231.60,
+    kwp: 231.6,
     panel: 386,
     inverter: 2,
     description: `งานติดตั้งแผงโซลาร์เซลล์ ที่ SIPSO TROPICAL DRINK
     โดยใช้ Inverter Growatt ขนาด 125.00kW จำนวน 2 เครื่อง
      แผงโซลาร์เซลล์ TRINA 600Wp  จำนวน 386 แผ่น`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 13.896260903177364,
+      lng: 100.27337671523975,
     },
-    images: [
-      
-    ],
+    images: [],
   },
   {
     id: 17,
     name: "SOLAR HOME 10.00 kW",
-    kwp: 10.00,
+    kwp: 10.0,
     panel: 18,
     inverter: 1,
     description: `งานติดตั้งแผงโซลาร์เซลล์ ที่โครงการบ้านจัดสรร
@@ -338,26 +334,26 @@ export const projects = [
     images: [
       "/media-data/images/solar_home_10_1.jpg",
       "/media-data/images/solar_home_10_2.jpg",
-      "/media-data/images/solar_home_10_3.jpg"
+      "/media-data/images/solar_home_10_3.jpg",
     ],
   },
   {
     id: 18,
     name: "SOUTHERN CHEMICALS Solar rooftop system",
-    kwp: 250.80,
+    kwp: 250.8,
     panel: 418,
     inverter: 2,
     description: `งานติดตั้งแผงโซลาร์เซลล์ ที่โรงงานผลิตและจำหน่ายกรดซัลฟูริก สารส้ม และเคมีภัณฑ์
     โดยใช้ Inverter ยี่ห้อ SMA  ขนาด 110kW จำนวน 2 เครื่อง
     แผงโซลาร์เซลล์ ยี่ห้อ TRINA ขนาด 600W จำนวน 418 แผ่น`,
     location: {
-      lat: null,
-      lng: null,
+      lat: 8.312776243549616,
+      lng: 99.9392897201343,
     },
     images: [
       "/media-data/images/SOUTHERN_CHEMICALS_1.jpg",
       "/media-data/images/SOUTHERN_CHEMICALS_2.jpg",
-      "/media-data/images/SOUTHERN_CHEMICALS_3.jpg"
+      "/media-data/images/SOUTHERN_CHEMICALS_3.jpg",
     ],
   },
   {
