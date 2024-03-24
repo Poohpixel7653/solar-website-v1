@@ -3,6 +3,10 @@ import FilterButton from "./FilterButton";
 import PackageCard from "./PackageCard";
 import { packages_data } from "../../data/package";
 import PackageModal from "./PackageModal";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import { logo } from "../../assets";
+import { Link } from "react-router-dom";
 
 const phases = [
   "1 Phase | 3 kW",
@@ -98,79 +102,100 @@ const Package = () => {
   };
 
   return (
-    <div className="w-full bg-[#F0FBF7] py-24">
-      <div className="md:max-w-[1400px] m-auto grid md:grid-cols-1">
-        <div className="flex justify-center">
-          <h1 className="md:leading-[72px] text-5xl font-bold">
-            แพ็กเกจ<span className="text-[#509274]"> Solar Rooftop</span>
-          </h1>
+    <>
+      <div className="w-full bg-[#F0FBF7]">
+        <div className="md:max-w-[1400px] m-auto">
+          <Link to={"/"}>
+            <div className="flex p-2 rounded-xl gap-4">
+              <img src={logo} className="h-[75px]" />
+              <div>
+                <p className="hidden lg:block lg:text-lg font-medium">
+                  MONO ENERGY CONSTRUCTION CO., LTD.
+                </p>
+                <p className="hidden lg:block text-[#d1d1d1] font-medium">
+                  บริษัท โมโน เอ็นเนอร์ยี่ คอนสตรัคชั่น จำกัด
+                </p>
+              </div>
+            </div>
+          </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10">
-          <div className="text-center">
-            <div className="mb-5">
-              <h1>เฟส | กำลังติดตั้ง</h1>
-              <div className="grid grid-cols-3 md:grid-cols-1">
-                {phases.map((phase) => {
-                  return (
-                    <FilterButton
-                      key={phase}
-                      name={phase}
-                      onClick={(name) => {
-                        if (phasePowers.indexOf(name) > -1) {
-                          phasePowers.splice(phasePowers.indexOf(name), 1);
-                        } else {
-                          phasePowers.push(name);
-                        }
+      </div>
+      <div className="w-full bg-[#F0FBF7] py-24">
+        <div className="md:max-w-[1400px] m-auto grid md:grid-cols-1">
+          <div className="flex justify-center">
+            <h1 className="md:leading-[72px] text-5xl font-bold">
+              แพ็กเกจ <span className="text-[#509274]">MONO Solar Rooftop</span>
+            </h1>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10">
+            <div className="text-center">
+              <div className="mb-5">
+                <h1>เฟส | กำลังติดตั้ง</h1>
+                <div className="grid grid-cols-3 md:grid-cols-1">
+                  {phases.map((phase) => {
+                    return (
+                      <FilterButton
+                        key={phase}
+                        name={phase}
+                        onClick={(name) => {
+                          if (phasePowers.indexOf(name) > -1) {
+                            phasePowers.splice(phasePowers.indexOf(name), 1);
+                          } else {
+                            phasePowers.push(name);
+                          }
 
-                        filterProducts(phasePowers);
+                          filterProducts(phasePowers);
+                        }}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="mb-5">
+                <h1>ยี่ห้อแผงโซลาร์เซลล์</h1>
+                <div className="grid grid-cols-3 md:grid-cols-1">
+                  {solar_brand.map((solar) => (
+                    <FilterButton
+                      key={solar}
+                      name={solar}
+                      onClick={(solar) => {
+                        if (pvList.indexOf(solar) > -1) {
+                          pvList.splice(pvList.indexOf(solar), 1);
+                        } else {
+                          pvList.push(solar);
+                        }
+                        filterPVSolar();
                       }}
                     />
-                  );
-                })}
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="mb-5">
-              <h1>ยี่ห้อแผงโซลาร์เซลล์</h1>
-              <div className="grid grid-cols-3 md:grid-cols-1">
-                {solar_brand.map((solar) => (
-                  <FilterButton
-                    key={solar}
-                    name={solar}
-                    onClick={(solar) => {
-                      if (pvList.indexOf(solar) > -1) {
-                        pvList.splice(pvList.indexOf(solar), 1);
-                      } else {
-                        pvList.push(solar);
-                      }
-                      filterPVSolar();
-                    }}
-                  />
-                ))}
+              <div className="mb-5">
+                <h1>ยี่ห้ออินเวอเตอร์</h1>
+                <div className="grid grid-cols-3 md:grid-cols-1">
+                  {inverter_brand.map((inverter) => (
+                    <FilterButton
+                      key={inverter}
+                      name={inverter}
+                      onClick={(inverter) => {
+                        if (inverterList.indexOf(inverter) > -1) {
+                          inverterList.splice(
+                            inverterList.indexOf(inverter),
+                            1
+                          );
+                        } else {
+                          inverterList.push(inverter);
+                        }
+                        filterInverterSolar();
+                      }}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="mb-5">
-              <h1>ยี่ห้ออินเวอเตอร์</h1>
-              <div className="grid grid-cols-3 md:grid-cols-1">
-                {inverter_brand.map((inverter) => (
-                  <FilterButton
-                    key={inverter}
-                    name={inverter}
-                    onClick={(inverter) => {
-                      if (inverterList.indexOf(inverter) > -1) {
-                        inverterList.splice(inverterList.indexOf(inverter), 1);
-                      } else {
-                        inverterList.push(inverter);
-                      }
-                      filterInverterSolar();
-                    }}
-                  />
-                ))}
-              </div>
-            </div>
-
-            {/* <div className="mb-5">
+              {/* <div className="mb-5">
               <h1>แพ็กเกจ</h1>
               <div className="grid grid-cols-3 md:grid-cols-1">
                 {packages.map((_package) => (
@@ -178,14 +203,14 @@ const Package = () => {
                 ))}
               </div>
             </div> */}
-          </div>
-          <div className="col-span-3">
-            <div className="grid grid-cols-2 md:grid-cols-3  gap-4">
-              {filteredProducts.map((item) => (
-                <PackageCard data={item} onClick={clickHandler} />
-              ))}
             </div>
-            {/* 
+            <div className="col-span-3">
+              <div className="grid grid-cols-2 md:grid-cols-3  gap-4">
+                {filteredProducts.map((item) => (
+                  <PackageCard data={item} onClick={clickHandler} />
+                ))}
+              </div>
+              {/* 
             <div class="flex w-full items-center justify-center py-10 lg:px-0 sm:px-6 px-4">
               <div class="w-full  flex items-center justify-between border-t border-gray-200">
                 <div class="flex items-center pt-3 text-gray-600 hover:text-[#509274] cursor-pointer">
@@ -280,14 +305,16 @@ const Package = () => {
                 </div>
               </div>
             </div> */}
+            </div>
           </div>
         </div>
-      </div>
 
-      {modalOpen && packageData ? (
-        <PackageModal data={packageData} onClose={closeModalHandler} />
-      ) : null}
-    </div>
+        {modalOpen && packageData ? (
+          <PackageModal data={packageData} onClose={closeModalHandler} />
+        ) : null}
+      </div>
+      <Footer />
+    </>
   );
 };
 

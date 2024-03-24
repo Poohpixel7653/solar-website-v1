@@ -1,4 +1,5 @@
 import React from "react";
+import numberWithCommas from "../../utils/number.utils";
 
 const PackageModal = ({ data, onClose }) => {
   console.log(data);
@@ -52,6 +53,9 @@ const PackageModal = ({ data, onClose }) => {
                 <div class="mb-2 mt-2 items-center">
                   <h1 className="font-medium text-5xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                     {data.code || ""}
+                    <span className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                     {" "} ({numberWithCommas(data.price)} บาท)
+                    </span>
                   </h1>
                 </div>
 
@@ -74,19 +78,28 @@ const PackageModal = ({ data, onClose }) => {
                         รุ่นแผงโซลาร์เซลล์
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        HY-WH144P8-550
+                        {data.pv_panel_model || ""}
                       </h1>
                     </div>
 
                     <div className="mb-4">
+                      <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                        จำนวน (แผง)
+                      </p>
+                      <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        {data.pv_panel_quantity || ""}
+                      </h1>
+                    </div>
+
+                    {/* <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
                         Maximum Power
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                         550 Watts
                       </h1>
-                    </div>
-
+                    </div> */}
+                    {/* 
                     <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
                         Module Efficiency
@@ -94,7 +107,7 @@ const PackageModal = ({ data, onClose }) => {
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                         21.1%
                       </h1>
-                    </div>
+                    </div> */}
 
                     {/* <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
@@ -126,11 +139,11 @@ const PackageModal = ({ data, onClose }) => {
                         รุ่นอินเวอร์เตอร์
                       </p>
                       <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        BluE-G-3000S
+                        {data.inverter_model}
                       </h1>
                     </div>
 
-                    <div className="mb-4">
+                    {/* <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
                         Rated Output Power
                       </p>
@@ -146,7 +159,7 @@ const PackageModal = ({ data, onClose }) => {
                       <h1 className="font-medium font-400 text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
                         97.6%
                       </h1>
-                    </div>
+                    </div> */}
 
                     <div className="mb-4">
                       <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
@@ -168,57 +181,182 @@ const PackageModal = ({ data, onClose }) => {
                   </div>
                 </div>
 
-                {/* <div className="mt-5">
-                  <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                    ข้อมูลสำหรับแพ็กเกจ Optimizer / Micro Inverter
+                <div className="mt-5">
+                  <h1 className="font-medium text-2xl underline text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                    เพิ่มเติม
                   </h1>
-                  <div className="grid lg:grid-cols-3 md:grid-cols-2 mb-2 mt-2 items-center justify-center">
-                    <div className="mb-4">
-                      <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        Additional
-                      </p>
-                      <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        -
-                      </h1>
-                    </div>
+                  <div className="grid lg:grid-cols-2 md:grid-cols-2 mb-2 mt-2 items-center justify-center">
+                    {data.wlan ? (
+                      <>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            WLAN
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.wlan}
+                          </h1>
+                        </div>
 
-                    <div className="mb-4">
-                      <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        ยี่ห้อ PV Optimizer
-                      </p>
-                      <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        -
-                      </h1>
-                    </div>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            จำนวน (ตัว)
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.wlan_quantity}
+                          </h1>
+                        </div>
+                      </>
+                    ) : null}
+                    {data.meter ? (
+                      <>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            SMART METER
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.meter}
+                          </h1>
+                        </div>
 
-                    <div className="mb-4">
-                      <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        รุ่น PV Optimizer
-                      </p>
-                      <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        -
-                      </h1>
-                    </div>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            จำนวน (ตัว)
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.meter_quantity}
+                          </h1>
+                        </div>
+                      </>
+                    ) : null}
 
-                    <div className="mb-4">
-                      <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        Maximum Efficiency
-                      </p>
-                      <h1 className="font-medium font-400 text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        -
-                      </h1>
-                    </div>
+                    {data.box ? (
+                      <>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            กล่อง AC/DC BOX
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.box}
+                          </h1>
+                        </div>
 
-                    <div className="mb-4">
-                      <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-                        PV Optimizer Datasheet
-                      </p>
-                      <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
-                        -
-                      </h1>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            จำนวน (ตู้)
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.box_quantity}
+                          </h1>
+                        </div>
+                      </>
+                    ) : null}
+
+                    {data.mount ? (
+                      <>
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            Mounting roof
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.mount}
+                          </h1>
+                        </div>
+
+                        <div className="mb-4">
+                          <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                            จำนวน (ชุด)
+                          </p>
+                          <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                            {data.mount_quantity}
+                          </h1>
+                        </div>
+                      </>
+                    ) : null}
+                  </div>
+                </div>
+
+                {data.detail ? (
+                  <div className="mt-5">
+                    <h1 className="font-medium text-2xl underline text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                      รายละเอียด
+                    </h1>
+                    <div className="grid lg:grid-cols-4 md:grid-cols-2 mb-2 mt-2 items-center justify-center">
+                      <div className="mb-4">
+                        <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                          ประหยัดค่าไฟฟ้า (บาท)
+                        </p>
+                        <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                          {numberWithCommas(data.detail.save)}
+                        </h1>
+                      </div>
+
+                      <div className="mb-4">
+                        <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                          พื้นที่ติดตั้งโดยประมาณ(ตร.ม)
+                        </p>
+                        <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                          {data.detail.area}
+                        </h1>
+                      </div>
+
+                      <div className="mb-4">
+                        <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                          ระยะเวลาคืนทุน(ปี)
+                        </p>
+                        <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                          {data.detail.payback_period}
+                        </h1>
+                      </div>
+
+                      <div className="mb-4">
+                        <p class="block  text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
+                          รับประกันงานติดตั้ง(ปี)
+                        </p>
+                        <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                          {data.detail.guarantee}
+                        </h1>
+                      </div>
                     </div>
                   </div>
-                </div> */}
+                ) : null}
+
+                <div className="mt-5">
+                  <h1 className="font-medium text-2xl underline text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                    บริการ
+                  </h1>
+                  <div className="mb-2 mt-2 items-center justify-center">
+                    <ul>
+                      <li className="font-medium text-xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        ฟรี ล้างแผง 2 ครั้ง
+                      </li>
+                      <li className="font-medium text-xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        ฟรี ค่าแรงติดตั้ง
+                      </li>
+                      <li className="font-medium text-xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        ฟรี ค่าดำเนินการขออนุญาตขนานไฟฟ้า
+                      </li>
+                      <li className="font-medium text-xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        ระยะสายไฟจาก แผงถึง อินเวอร์เตอร์ ไม่เกิน 80 ม.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-5">
+                  <h1 className="font-medium text-2xl underline text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                    ติดต่อ
+                  </h1>
+                  <div className="mb-2 mt-2 items-center justify-center">
+                    <ul>
+                      <li className="font-medium text-xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        <a href="mailto:contact@mnec.co.th">sales@mnec.co.th</a>
+                      </li>
+                      <li className="font-medium text-xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
+                        <a href="tel:+66937261090">093-726-1090</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
                 <div className="mt-20">
                   <h1 className="font-medium text-2xl text-[#3f3a3a] leading-relaxed text-blue-gray-900 antialiased">
@@ -246,7 +384,7 @@ const PackageModal = ({ data, onClose }) => {
                       className="w-full min-h-full"
                       width="100%"
                       height="100%"
-                      src="https://www.computing.psu.ac.th/th/wp-content/uploads/2014/03/sample-pdf.pdf"
+                      src={data.inverter_pdf}
                       title="pdf-title"
                     ></iframe>
                   </div>

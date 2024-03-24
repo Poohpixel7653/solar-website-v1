@@ -69,9 +69,7 @@ const Navbar = ({ onClick }) => {
                 activeItem === "Product" ? "active" : ""
               }`}
             >
-              <Link to="/package-list">
-              Product
-            </Link>
+              <Link to="/package-list">Product</Link>
             </li>
             <li
               onClick={() => {
@@ -142,12 +140,15 @@ const Navbar = ({ onClick }) => {
       <div
         className={
           toggle
-            ? "z-10 p-4 w-full px-8 text-black bg-white md:hidden transition-transform transform translate-x-0"
+            ? "p-4 w-full px-8 text-black bg-white md:hidden transition-transform transform translate-x-0"
             : "hidden"
         }
       >
         <ul>
           <li className="p-4 hover:bg-gray-100 ">Home</li>
+          <li className="p-4 hover:bg-gray-100 ">
+            <Link to="/package-list">Product</Link>
+          </li>
           <li className="p-4 hover:bg-gray-100 ">About</li>
           <li className="p-4 hover:bg-gray-100 ">Support</li>
           <li className="p-4 hover:bg-gray-100 ">Platform</li>

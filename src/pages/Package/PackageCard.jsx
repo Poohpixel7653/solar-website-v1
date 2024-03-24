@@ -1,4 +1,5 @@
 import React from "react";
+import numberWithCommas from "../../utils/number.utils";
 
 const PackageCard = ({ data, onClick }) => {
   return (
@@ -22,7 +23,7 @@ const PackageCard = ({ data, onClick }) => {
               {data.phase_power || ""}
             </p>
             <p class="block  text-2xl font-medium leading-relaxed text-blue-gray-900 antialiased">
-              {data.price || ""} THB
+              {numberWithCommas(data.price) || ""} THB
             </p>
           </div>
           <div>
