@@ -3,30 +3,7 @@ import ServiceCard from "./ServiceCard";
 import { RiSchoolLine } from "react-icons/ri";
 import HeroCard from "./HeroCard";
 import { projects } from "../data/project";
-
-const SolarService = [
-  {
-    id: 1,
-    title: "Engineering",
-    description:
-      "ออกแบบระบบโซล่าเซลล์ให้ถูกต้องตามมารฐานสํารวจหน้างานประเมินการใช้ไฟของลูกค้า",
-    image: "/media-data/images/service_3.png",
-  },
-  {
-    id: 2,
-    title: "Procurement",
-    description:
-      "เลือกผลิตภัณฑ์ที่เหมาะสมกับความต้องการของลูกค้าและมีคุณภาพพร้อมมาตรฐานในราคาที่ถูก",
-    image: "/media-data/images/service_2.jpg",
-  },
-  {
-    id: 3,
-    title: "Construction",
-    description:
-      "ดําเนินการโครงการตามที่ออกแบบไว้ พร้อมทีมงานและเครื่องมือที่ครบทั้งโครงการ โดยคํานึงถึงความปลอดภัย",
-    image: "/media-data/images/service_1.jpg",
-  },
-];
+import { SolarService } from "../data/service";
 
 const Service = ({ id }) => {
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -127,9 +104,9 @@ const Service = ({ id }) => {
           <div
             className="h-[300px] lg:h-[500px] mt-4 bg-center bg-cover bg-no-repeat transition-background-image duration-300 group relative m-0 flex rounded-xl shadow-xl"
             style={{
-              backgroundImage: `${
+              backgroundImage: `url(${
                 hoveredImage ? hoveredImage : SolarService[0].image
-              }`,
+              })`,
             }}
           >
             <div className="w-full mt-auto justify-center justify-items-center items-center gap-6 bottom-0">
