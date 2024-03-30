@@ -9,14 +9,15 @@ import { logo } from "../../assets";
 import { Link } from "react-router-dom";
 
 const phases = [
-  "1 Phase | 3 kW",
-  "1 Phase | 5 kW",
-  "3 Phase | 10 kW",
-  "3 Phase | 15 kW",
-  "3 Phase | 20 kW",
-  "3 Phase | 30 kW",
-  "3 Phase | 50 kW",
-  "3 Phase | 100 kW",
+  "3.48 kW (1 Phase)",
+  "5.22 kW (1Phase)",
+  "5.22 kW (3Phase)",
+  "10.44 kW (3 Phase)",
+  "15.08 kW (3 Phase)",
+  "20.30 kW (3 Phase)",
+  "30.16 kW (3 Phase)",
+  "50.46 kW (3 Phase)",
+  "100.34 kW (3 Phase)"
 ];
 
 const solar_brand = ["TW SOLAR"];
