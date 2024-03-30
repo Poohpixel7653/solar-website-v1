@@ -65,7 +65,7 @@ const Hero = ({ id }) => {
             SAVE ENERGY SAFETY WITH OUR SOLAR CELL SYSTEM
           </p>
           <span className="text-xs py-2 lg:text-3xl md:text-2xl text-white font-medium">
-            BY Mono Energy Contruction co.,ltd.
+            BY Mono Energy Contruction co., ltd.
           </span>
           <p className="hidden md:block py-2 text-xs lg:text-lg md:text-sm text-white font-medium mt-5">
             ระบบเซลล์แสงอาทิตย์เป็นระบบที่ผลิตไฟฟ้าจากแสงอาทิตย์
@@ -94,7 +94,7 @@ const Hero = ({ id }) => {
           <p className="text-xl py-2 lg:text-5xl md:text-xl text-white font-medium">
             เกี่ยวกับ{" "}
             <span className="md:leading-[72px] text-6xl font-bold">
-              Mono Energy Contruction co.,ltd.
+              Mono Energy Contruction co., ltd.
             </span>
           </p>
           <p className="text-xs py-2 lg:text-3xl md:text-2xl font-medium text-[#7ce6b6]">

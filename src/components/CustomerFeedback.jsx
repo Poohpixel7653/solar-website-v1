@@ -25,7 +25,7 @@ const CustomerFeedback = ({ id }) => {
           ผลงานที่ผ่านมาของ{" "}
           <span className="text-[#6abe99]">
             {" "}
-            Mono Energy Contruction co.,ltd.
+            Mono Energy Contruction co., ltd.
           </span>
         </p>
         <div className="items-center justify-center">

@@ -46,7 +46,7 @@ const Service = ({ id }) => {
             MONO<span className="text-[#509274]"> Services</span>
           </h1>
           <p className="text-lg text-white">
-            บริการของ Mono energy contruction co.,ltd.
+            บริการของ Mono energy contruction co., ltd.
           </p>
           <div>
             <p class="mt-2 text-[#d1d1d1]">

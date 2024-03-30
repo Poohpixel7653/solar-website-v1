@@ -19,7 +19,7 @@ const CustomerMap = ({id}) => {
           สถานที่ของผลงานที่ผ่านมา{" "}
           <span className="text-[#6abe99]">
             {" "}
-            Mono Energy Contruction co.,ltd.
+            Mono Energy Contruction co., ltd.
           </span>
         </p>
         <div className="h-[600px] mt-4">

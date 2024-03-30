@@ -7,18 +7,9 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import { logo } from "../../assets";
 import { Link } from "react-router-dom";
+import { CiShoppingCart } from "react-icons/ci";
 
-const phases = [
-  "3.48 kW (1 Phase)",
-  "5.22 kW (1Phase)",
-  "5.22 kW (3Phase)",
-  "10.44 kW (3 Phase)",
-  "15.08 kW (3 Phase)",
-  "20.30 kW (3 Phase)",
-  "30.16 kW (3 Phase)",
-  "50.46 kW (3 Phase)",
-  "100.34 kW (3 Phase)"
-];
+const phases = packages_data.map((_package) => _package.phase_power);
 
 const solar_brand = ["TW SOLAR"];
 
@@ -105,7 +96,7 @@ const Package = () => {
   return (
     <>
       <div className="w-full bg-[#F0FBF7]">
-        <div className="md:max-w-[1400px] m-auto">
+        <div className="md:max-w-[1400px] m-auto flex justify-between">
           <Link to={"/"}>
             <div className="flex p-2 rounded-xl gap-4">
               <img src={logo} className="h-[75px]" />
@@ -119,13 +110,22 @@ const Package = () => {
               </div>
             </div>
           </Link>
+
+          <Link to={"/items"}>
+            <div className="flex p-2 rounded-xl gap-4">
+              <CiShoppingCart />
+              <div>
+                <p className="text-lg font-medium">สินค้าสำหรับเพื่อนช่าง</p>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="w-full bg-[#F0FBF7] py-24">
         <div className="md:max-w-[1400px] m-auto grid md:grid-cols-1">
           <div className="flex justify-center">
             <h1 className="md:leading-[72px] text-5xl font-bold">
-              แพ็กเกจ <span className="text-[#509274]">MONO Solar Rooftop</span>
+              แพ็กเกจ <span className="text-[#509274]">MONO Solar Home</span>
             </h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10">
